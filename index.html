@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Whack a Mole</title>
+</head>
+<body>
+    <div class="table">
+        <h1 class="table-title">Whac a Mole</h1>
+        <h3 class="table-text">Countdown:</h3>
+            <p id="countdown">60</p>
+        <h3 class="table-text" >Count:</h3>
+            <p id="count">0</p>
+        
+        <button class="table-button" id="start" onclick="changeCulprit()" >START</button>
+
+        <div class="table-of-holes">
+            <div class="hole" id="1"></div>
+            <div class="hole" id="2"></div>
+            <div class="hole" id="3"></div>
+            <div class="hole" id="4"></div>
+            <div class="hole" id="5"></div>
+            <div class="hole" id="6"></div>
+            <div class="hole" id="7"></div>
+        </div>
+        <h3 class="table-text">Highest rating:</h3>
+            <p id="highest-rating"></p>
+    </div>
+
+    <script src="./functionality.js"></script>
+</body>
+</html>
