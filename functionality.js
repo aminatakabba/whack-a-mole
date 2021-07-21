@@ -5,7 +5,7 @@ const culprit = document.querySelector('.culprit'); //selecting the culprit/mole
 const button = document.querySelector('.table-button'); //selecting the button to start the game
 
 let touches = 0; // count starts at zero
-let touchedHole; // This will store the hole being clicked
+let touchedHole; // This will store id of the hole being clicked
 
 // Randomly selects a hole and makes it red. Because this function wil run multiple times you must clear out the previous value, so the firs thing I do is remove the culprit/mole
 function holeRandom() {
@@ -33,9 +33,9 @@ holes.forEach(hole => {
 })
 
 // The holeRandom function will re-run every 7 seconds
-let timerId = null; // will stop it from moving
 function changeCulprit() {
-    timerId = setInterval(holeRandom, 700)
+    let timerId = null; 
+    timerId = setInterval(holeRandom, 700) 
 }
 
 let time = 61; // The time will start at 60 seconds
@@ -43,7 +43,6 @@ function timer() {
     time--
     countdown.textContent = time
     if(time == 0) {
-        clearInterval(TimerId);
         clearInterval(timerId);
         alert('GAME OVER');
     }
