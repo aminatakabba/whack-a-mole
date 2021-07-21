@@ -44,13 +44,15 @@ function timer() {
     countdown.textContent = time
     if(time == 0) {
         clearInterval(timerId);
-        alert('GAME OVER');
+        clearInterval(countdowntimerId);
+        alert('GAME OVER'); 
     }
 }
-let TimerId = setInterval(timer, 1000) // will make the timer function run every second and show the current value
+let countdowntimerId = setInterval(timer, 1000) // will make the timer function run every second and show the current value
 
 
 // SOME ISSUES I'VE COME ACROSS
 //  - I deviced to stop working and do the second challenge so I wasn't able to add the countdown timer into the start button
+
 //  - I did not have enough time to attempt the second part of the firs challenge, saving 10 of the highest scores
 
